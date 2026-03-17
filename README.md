@@ -2,7 +2,7 @@
 
 Git commit messages as a structured knowledge protocol for AI coding agents.
 
-Based on the [Lore protocol](https://github.com/AugmentedMind/lore) by Ivan Stetsenko (2026).
+Based on the paper ["Lore: Repurposing Git Commit Messages as a Structured Knowledge Protocol for AI Coding Agents"](https://arxiv.org/abs/2603.15566) by Ivan Stetsenko (2026).
 
 ## Problem: Decision Shadow
 
@@ -62,13 +62,17 @@ git log --trailer="Directive" -- path/to/file.ts
 
 Zero infrastructure. Your git history becomes a queryable decision database.
 
-## Agent Skill
+## Install
 
-This repo includes a Claude Code skill at [`skills/lore-commits/SKILL.md`](skills/lore-commits/SKILL.md) that teaches AI agents to write Lore-formatted commit messages.
-
-Install:
 ```bash
-cp -r skills/lore-commits ~/.claude/skills/
+npx lore-commits
+```
+
+This installs a [Claude Code](https://claude.ai/download) skill that teaches AI agents to write Lore-formatted commit messages.
+
+To uninstall:
+```bash
+npx lore-commits uninstall
 ```
 
 ## Key Properties
