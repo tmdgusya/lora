@@ -65,14 +65,14 @@ Zero infrastructure. Your git history becomes a queryable decision database.
 ## Install
 
 ```bash
-npx lore-commits
+npx skills add tmdgusya/lora
 ```
 
-This installs a [Claude Code](https://claude.ai/download) skill that teaches AI agents to write Lore-formatted commit messages.
+This installs a [Claude Code](https://claude.ai/download) skill that teaches AI agents to write Lore-formatted commit messages. Works with any agent that supports the [skills](https://github.com/vercel-labs/skills) ecosystem.
 
-To uninstall:
+Global install (available across all projects):
 ```bash
-npx lore-commits uninstall
+npx skills add tmdgusya/lora -g
 ```
 
 ## Key Properties
