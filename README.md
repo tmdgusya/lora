@@ -52,12 +52,13 @@ All trailers are optional and repeatable. Extend with custom trailers as needed.
 
 ## Querying
 
-Git trailers are natively queryable:
+Git trailers are queryable with standard git tools:
 
 ```bash
-git log --trailer="Constraint" -- path/to/file.ts
-git log --trailer="Rejected" -- path/to/file.ts
-git log --trailer="Directive" -- path/to/file.ts
+# Find commits containing a specific trailer
+git log --all --grep="^Constraint:" -- path/to/file.ts
+git log --all --grep="^Rejected:" -- path/to/file.ts
+git log --all --grep="^Directive:" -- path/to/file.ts
 ```
 
 Zero infrastructure. Your git history becomes a queryable decision database.

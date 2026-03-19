@@ -85,20 +85,20 @@ Not-tested: Auth service cold-start > 500ms behavior
 
 Agents naturally capture decision context as prose paragraphs. The problem: **prose is not queryable**.
 
-Git trailers are a native git feature. No custom parsing needed:
+Git trailers are a native git feature. Queryable with standard git tools:
 
 ```bash
 # Query all constraints affecting a file
-git log --trailer="Constraint" -- path/to/file.ts
+git log --all --grep="^Constraint:" -- path/to/file.ts
 
 # Find all rejected approaches
-git log --trailer="Rejected" -- path/to/file.ts
+git log --all --grep="^Rejected:" -- path/to/file.ts
 
 # Find directives (warnings for future modifiers)
-git log --trailer="Directive" -- path/to/file.ts
+git log --all --grep="^Directive:" -- path/to/file.ts
 
 # Check what's not tested
-git log --trailer="Not-tested" -- path/to/file.ts
+git log --all --grep="^Not-tested:" -- path/to/file.ts
 ```
 
 This turns your git history into a **queryable decision database** at zero infrastructure cost.
