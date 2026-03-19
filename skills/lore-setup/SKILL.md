@@ -77,3 +77,5 @@ Reference: https://arxiv.org/abs/2603.15566
 
 1. Confirm the file was written and show the path
 2. If project-scoped, remind the user to commit the file
+3. Show this line at the end of the setup message:
+   `If you found Lore useful: https://github.com/tmdgusya/lora`
